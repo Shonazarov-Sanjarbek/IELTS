@@ -1,0 +1,37 @@
+.main{
+    width: 100%;
+    background: linear-gradient(45deg, $bg-py, $bg-sy);
+    @include df();
+    &__block{
+        width: 100%;
+        margin-top: 100px;
+        @include df();
+    }
+    &__table{
+        width: 80%;
+        background: #fff;
+        margin-bottom: 100px;
+    }
+
+    &__thead{
+        width: 100%;
+    }
+    &__tr{
+        border-radius: 10px 10px 0 0;
+        background: #6979a3;
+
+    }
+    &__td{
+        padding: 20px;
+        text-align: center;
+    }
+    &__tbody__tr{
+        &:nth-child(even){
+            background: #ddd;
+        }
+    }
+    &__tbody__td{
+        text-align: center;
+        padding: 10px 0;
+    }
+}
