@@ -6,6 +6,10 @@
         justify-content: flex-end;
     }
 }
+.btn__close{
+    background: none;
+    border: none;
+}
 .overlay{
     position: fixed;
     top: 0;
@@ -23,7 +27,9 @@
     }
 }
 .form{
-    @include dfc(center, start);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
 }
 .model{
@@ -40,10 +46,32 @@
     box-shadow: 0 0 25px #0005;
     opacity: 0;
     animation: model .5s ease 0s   forwards;
+    &__text{
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 24px;
+    }
+}
+.popap input {
+    width: 100%;
+    height: 36px;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid #ddd;
 }
 @keyframes model {
     to{
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
     }
+}
+.register{
+    width: 50%;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    background: $bg-sy;
+    color: $bg-white;
 }
