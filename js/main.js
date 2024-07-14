@@ -43,20 +43,50 @@ model.addEventListener("submit", (event) => {
     let existstudents = students.findIndex(student => student.username === username)
     if (existstudents >= 0) {
         return alert("bu username avval ro'yxatdan o'tgan")
+        
+        console.log(existstudents);
     }
-    console.log(existstudents);
-    let newStudent = {
-        id : new Date().getTime(),
+        let newStudent = {
+            id : new Date().getTime(),
         firstName,
         lastName,
         age,
         score,
     }
-    students.push(newStudent)
+    students.push(newStudent);
+    console.log(newStudent);
     model.reset()
     popapState("none")
-
+    createTable(students)
 })
 // model end
+
+
+// table create start 
+const tbody = document.querySelector(".tbody")
+
+function createTable(data) {
+    while (tbody.firstChild) {
+        tbody.firstChild.remove()
+    }
+    data.forEach(human => {
+        let tr = document.createElement("tr")
+        tr.classList.add("main__tbody__tr")
+        tr.innerHTML =
+            `
+            <td>${ human.id }</td>
+            <td>${ human.firstName }</td>
+            <td>${ human.lastName }</td>
+            <td>${ human.username }</td>
+            <td>${ human.age }</td>
+            <td>${ human.score }</td>
+            `
+            tbody.appendChild(tr)
+            console.log(tr);
+        }
+    );
+}
+createTable(students)
+// table create end
 
 
