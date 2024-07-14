@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.min.css">
-    <link rel="icon" href="./assets/img/table-logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>IELTS</title>
 </head>
 <body>
@@ -12,7 +12,15 @@
 
     <main class="main" id="main">
         <div class="container">
-            <section class="main__block">
+            <div class="main__block">
+                <form class="main__subtitle">
+                    <p>
+                        IELTS results of students who completed a special course
+                    </p>
+                    <button type="button" class="main__btn">
+                        create
+                    </button>
+                </form>
                 <table class="main__table">
                     <thead class="main__thead">
                         <tr class="main__tr">
@@ -308,8 +316,36 @@
 
                     </tbody>
                 </table>
-            </section>
+            </div>
+
+            <div class="popap">
+                <div class="overlay"></div>
+                <form action="" class="model form">
+                    <div class="popap__btn">
+                        <button type="button" class="btn__close "><i class="fa-solid fa-x"></i></button>
+                    </div>
+                    <p class="model__text">Sign up</p>
+                    <input type="text" placeholder="name" class="model__name error" required>
+                    <input type="text" placeholder="username" class="model__username error" required>
+                    <div class="password">
+                        <input type="password" placeholder="password" class="model__password" required>
+                        <div class="btn__password">
+                            <i class="fa-solid  fa-eye"></i>
+                        </div>     
+                    </div>
+                    <div class="password">
+                        <input type="password" placeholder="password-confirm" class="model__password-confirm"required>
+                        <div class="btn__password">
+                            <i class="fa-solid  fa-eye"></i>
+                        </div>                  
+                    </div>
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </div>
         </div>
     </main>
+
+    <script src="./js/main.js "></script>
 </body>
 </html>

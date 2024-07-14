@@ -1,0 +1,49 @@
+.popap{
+    display: none;
+    &__btn{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #0004;
+    z-index: 100;
+    opacity: 0;
+    animation: overlay .5s ease 0s forwards;
+}
+@keyframes overlay {
+    to{
+        opacity: 1;
+    }
+}
+.form{
+    @include dfc(center, start);
+    gap: 20px;
+}
+.model{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%) scale(.8);
+    width: 350px;
+    min-height: 400px;
+    background: $bg-white;
+    padding: 20px;
+    border-radius: 15px;
+    z-index: 101;
+    box-shadow: 0 0 25px #0005;
+    opacity: 0;
+    animation: model .5s ease 0s   forwards;
+}
+@keyframes model {
+    to{
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
